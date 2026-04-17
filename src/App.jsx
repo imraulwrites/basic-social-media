@@ -3,6 +3,7 @@ import { Footer, Navbar } from './components';
 import Home from './pages/Home/Home';
 import Profile from './pages/Profile/Profile';
 import Timeline from './pages/Timeline/Timeline';
+import Chart from './pages/Chart/Chart';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/timeline" element={<Timeline />} />
+        <Route path="/stats" element={<Chart />} />
       </Routes>
       <Footer />
     </>
