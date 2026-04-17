@@ -1,10 +1,11 @@
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import FriendsContainer from './FriendsContainer';
 
 function Home() {
   return (
-    <section>
+    <section className="wrapper">
       <div className="py-20 flex flex-col items-center justify-center">
         <h1 className="text-5xl font-bold text-black-txt pb-4">
           Friends to keep close in your life
@@ -19,7 +20,7 @@ function Home() {
         </div>
 
         {/* Key Stats Start */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-6 w-full pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-6 w-full pb-10 border-b border-[#e9e9e9FF]">
           <div className="p-8 border border-gray-200 shadow-sm rounded-2xl flex flex-col items-center justify-center  text-center">
             <h3 className="pb-2 text-green-light text-3xl font-semibold">10</h3>
             <p className="text-lg font-normal text-gray-txt">Total Friends</p>
@@ -38,6 +39,8 @@ function Home() {
           </div>
         </div>
         {/* End Key Stats */}
+
+        <FriendsContainer />
       </div>
     </section>
   );

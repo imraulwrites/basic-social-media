@@ -8,6 +8,7 @@
 
   /* custom color */
   --color-green-light: #244d3fff;
+  --color-green-light-bg: #cbfadbff;
   --color-black-txt: #1f2937ff;
   --color-muted: #64748bff;
   --color-bg-primary: #f8fafcff;
@@ -35,4 +36,16 @@ nav {
 
 .inactive-link-class {
   @apply bg-transparent text-muted font-semibold px-3 py-2 text-base;
+}
+
+.overdue {
+  @apply bg-[#ef4444FF] text-white capitalize p-2 rounded-4xl text-xs font-medium;
+}
+
+.on-track {
+  @apply bg-green-light text-white capitalize p-2 rounded-4xl text-xs font-medium;
+}
+
+.almost-due {
+  @apply bg-[#efad44FF] text-white capitalize p-2 rounded-4xl text-xs font-medium;
 }
