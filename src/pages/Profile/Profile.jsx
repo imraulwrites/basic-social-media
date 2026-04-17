@@ -6,6 +6,7 @@ import { faBell, faCommentDots, faTrashCan } from '@fortawesome/free-regular-svg
 import { faBoxArchive, faPhoneVolume, faVideo } from '@fortawesome/free-solid-svg-icons';
 import { FriendsContext } from '../../context/FriendContext';
 import { formatDate } from '../../lib/time';
+import { toast, ToastContainer } from 'react-toastify';
 
 function Profile() {
   const { activity, setActivity, handleActivity } = useContext(FriendsContext);
@@ -126,13 +127,14 @@ function Profile() {
             {/* Call, Audio, Video Cards */}
             <div className="grid grid-cols-3 gap-4">
               <div
-                onClick={() =>
+                onClick={() => {
                   handleActivity({
                     name,
                     type: 'Call',
                     time: formatDate(),
-                  })
-                }
+                  });
+                  toast.success(`Call with ${name}`);
+                }}
                 className="bg-bg-primary rounded-md p-4 flex flex-col items-center justify-center border border-gray-100 shadow-sm text-black-txt"
               >
                 <FontAwesomeIcon icon={faPhoneVolume} />
@@ -140,13 +142,14 @@ function Profile() {
               </div>
 
               <div
-                onClick={() =>
+                onClick={() => {
                   handleActivity({
                     name,
                     type: 'Text',
                     time: formatDate(),
-                  })
-                }
+                  });
+                  toast.success(`Text with ${name}`);
+                }}
                 className="bg-bg-primary rounded-md p-4 flex flex-col items-center justify-center border border-gray-100 shadow-sm text-black-txt"
               >
                 <FontAwesomeIcon icon={faCommentDots} />
@@ -154,13 +157,14 @@ function Profile() {
               </div>
 
               <div
-                onClick={() =>
+                onClick={() => {
                   handleActivity({
                     name,
                     type: 'Video',
                     time: formatDate(),
-                  })
-                }
+                  });
+                  toast.success(`Video with ${name}`);
+                }}
                 className="bg-bg-primary rounded-md p-4 flex flex-col items-center justify-center border border-gray-100 shadow-sm text-black-txt"
               >
                 <FontAwesomeIcon icon={faVideo} />

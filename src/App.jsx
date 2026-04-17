@@ -4,6 +4,7 @@ import Home from './pages/Home/Home';
 import Profile from './pages/Profile/Profile';
 import Timeline from './pages/Timeline/Timeline';
 import Chart from './pages/Chart/Chart';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/stats" element={<Chart />} />
       </Routes>
       <Footer />
+      <ToastContainer />
     </>
   );
 }
