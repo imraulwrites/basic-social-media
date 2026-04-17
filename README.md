@@ -1,16 +1,20 @@
-# React + Vite
+### Name of your project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Basic Social Media App
 
-Currently, two official plugins are available:
+### A short description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A social media app to communicate and expand your friendship network.
 
-## React Compiler
+### Technologies you used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. React,
+2. TailwindCSS
+3. JSON
+4. React toastify
 
-## Expanding the ESLint configuration
+### 3 key features of your project
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Creating Social Media for yourself
+2. Communicate using Call, Text and Video
+3. Check out Friendship Data
