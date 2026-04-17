@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import Data from '../../data/friends.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faCommentDots, faTrashCan } from '@fortawesome/free-regular-svg-icons';
 import { faBoxArchive, faPhoneVolume, faVideo } from '@fortawesome/free-solid-svg-icons';
+import { FriendsContext } from '../../context/FriendContext';
+import { formatDate } from '../../lib/time';
 
 function Profile() {
+  const { activity, setActivity, handleActivity } = useContext(FriendsContext);
+
   const { id } = useParams();
   console.log(id);
 
@@ -121,17 +125,44 @@ function Profile() {
 
             {/* Call, Audio, Video Cards */}
             <div className="grid grid-cols-3 gap-4">
-              <div className="bg-bg-primary rounded-md p-4 flex flex-col items-center justify-center border border-gray-100 shadow-sm text-black-txt">
+              <div
+                onClick={() =>
+                  handleActivity({
+                    name,
+                    type: 'Call',
+                    time: formatDate(),
+                  })
+                }
+                className="bg-bg-primary rounded-md p-4 flex flex-col items-center justify-center border border-gray-100 shadow-sm text-black-txt"
+              >
                 <FontAwesomeIcon icon={faPhoneVolume} />
                 <p className="text-lg font-normal">Call</p>
               </div>
 
-              <div className="bg-bg-primary rounded-md p-4 flex flex-col items-center justify-center border border-gray-100 shadow-sm text-black-txt">
+              <div
+                onClick={() =>
+                  handleActivity({
+                    name,
+                    type: 'Text',
+                    time: formatDate(),
+                  })
+                }
+                className="bg-bg-primary rounded-md p-4 flex flex-col items-center justify-center border border-gray-100 shadow-sm text-black-txt"
+              >
                 <FontAwesomeIcon icon={faCommentDots} />
                 <p className="text-lg font-normal">Text</p>
               </div>
 
-              <div className="bg-bg-primary rounded-md p-4 flex flex-col items-center justify-center border border-gray-100 shadow-sm text-black-txt">
+              <div
+                onClick={() =>
+                  handleActivity({
+                    name,
+                    type: 'Video',
+                    time: formatDate(),
+                  })
+                }
+                className="bg-bg-primary rounded-md p-4 flex flex-col items-center justify-center border border-gray-100 shadow-sm text-black-txt"
+              >
                 <FontAwesomeIcon icon={faVideo} />
                 <p className="text-lg font-normal">Video</p>
               </div>
