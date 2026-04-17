@@ -7,10 +7,10 @@ function Home() {
   return (
     <section className="wrapper">
       <div className="py-20 flex flex-col items-center justify-center">
-        <h1 className="text-5xl font-bold text-black-txt pb-4">
+        <h1 className="text-5xl font-bold text-black-txt pb-4 text-center">
           Friends to keep close in your life
         </h1>
-        <p className="text-gray-txt text-base font-normal pb-8">
+        <p className="text-gray-txt text-base font-normal pb-8 text-center">
           Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships
           that matter most.
         </p>

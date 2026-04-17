@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Footer() {
   return (
-    <footer className="">
-      <div className="bg-green-light text-white pt-20 text-center">
+    <footer className="bg-green-light">
+      <div className=" wrapper text-white pt-20 text-center">
         <h1 className="text-6xl font-extrabold">KeenKeeper</h1>
 
         <p className="text-base font-normal text-white/80 mb-6">
@@ -28,10 +28,10 @@ function Footer() {
           </div>
         </div>
 
-        <div className="wrapper flex justify-between py-8 text-[#fafafa]/60 border-t border-[#1a8862FF]/20">
+        <div className="wrapper flex flex-col md:flex-row justify-between py-8 text-[#fafafa]/60 border-t border-[#1a8862FF]/20">
           <p>© 2026 KeenKeeper. All rights reserved.</p>
 
-          <div className="flex gap-5">
+          <div className="flex gap-5 text-center items-center justify-center">
             <p>Privacy Policy</p>
             <p>Terms of Service</p>
             <p>Cookies</p>
