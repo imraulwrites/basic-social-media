@@ -2,8 +2,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import Data from '../../data/friends.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBell, faTrashCan } from '@fortawesome/free-regular-svg-icons';
-import { faBoxArchive } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faCommentDots, faTrashCan } from '@fortawesome/free-regular-svg-icons';
+import { faBoxArchive, faPhoneVolume, faVideo } from '@fortawesome/free-solid-svg-icons';
 
 function Profile() {
   const { id } = useParams();
@@ -116,12 +116,25 @@ function Profile() {
 
           <div className="p-6 bg-white rounded-lg border border-gray-200 shadow-sm">
             <div>
-              <h3 className="text-green-light text-xl font-medium">Quick Check-In</h3>
+              <h3 className="text-green-light text-xl font-medium mb-4">Quick Check-In</h3>
             </div>
 
             {/* Call, Audio, Video Cards */}
-            <div>
-              <div></div>
+            <div className="grid grid-cols-3 gap-4">
+              <div className="bg-bg-primary rounded-md p-4 flex flex-col items-center justify-center border border-gray-100 shadow-sm text-black-txt">
+                <FontAwesomeIcon icon={faPhoneVolume} />
+                <p className="text-lg font-normal">Call</p>
+              </div>
+
+              <div className="bg-bg-primary rounded-md p-4 flex flex-col items-center justify-center border border-gray-100 shadow-sm text-black-txt">
+                <FontAwesomeIcon icon={faCommentDots} />
+                <p className="text-lg font-normal">Text</p>
+              </div>
+
+              <div className="bg-bg-primary rounded-md p-4 flex flex-col items-center justify-center border border-gray-100 shadow-sm text-black-txt">
+                <FontAwesomeIcon icon={faVideo} />
+                <p className="text-lg font-normal">Video</p>
+              </div>
             </div>
           </div>
         </div>
